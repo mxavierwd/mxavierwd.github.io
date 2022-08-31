@@ -4,27 +4,36 @@
 
 
 .head{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 1rem;
-    padding-top: 1rem;
-    border-radius: 1rem;
-    background-color: rgb(224, 222, 222);
-    box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
     margin-left: 4rem;
     margin-right: 4rem;
     margin-top: 2rem;
+    padding-top: 1rem;
 }
 
 .head>img{
-    border: 1px solid black;
-    width: 5rem;
-    height: auto;
-    margin-right: 44rem;
-    margin-left: 4rem;
-
+    /* border: 1px solid black; */
+    width: auto;
+    height: 8rem;
+    border-radius: 1rem;
 }
+
+@media (min-width:950px){
+    .head>img{
+        /* border: 2px solid red; */
+        margin-left: 4rem;
+        left: 1rem;
+        top: 0.5rem;
+        bottom: 0.5rem;
+        position: absolute;
+        object-fit: contain;
+    }
+
+    .head{
+        position: relative;
+    }
+}
+    
+
 
 .head>h1{
     font-size: 2rem;
@@ -37,7 +46,8 @@
 
 .formation,
 .dvlpmt,
-.exp_pro{
+.exp_pro,
+.head{
     /* border: 1px solid black; */
     display: grid;
     justify-items: center;
@@ -48,6 +58,7 @@
     box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
     margin-left: 4rem;
     margin-right: 4rem;
+    padding-bottom: 1rem;
 }
 
 .dvlpmt h2,
@@ -59,4 +70,8 @@
 .dvlpmt a{
     color: inherit;
     text-decoration: none;
+}
+
+button{
+    margin: 0.5rem;
 }
